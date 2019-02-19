@@ -1,4 +1,4 @@
-package com.srs.filebrowser;
+package com.srs.filebrowser.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -23,5 +23,10 @@ public class HelloWorldController {
 		mv.addObject("message", message);
 		mv.addObject("name", name);
 		return mv;
+	}
+	
+	@RequestMapping("/world")
+	public String hello() {
+		return "{message:\"Hello World\"}";
 	}
 }
